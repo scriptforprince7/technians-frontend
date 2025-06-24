@@ -14,7 +14,7 @@ const Profile = () => {
     const fetchProfile = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await axios.get("http://localhost:5000/api/auth/profile", {
+        const res = await axios.get("https://technians-backend.onrender.com/api/auth/profile", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setProfile(res.data);
@@ -40,7 +40,7 @@ const Profile = () => {
     setSaving(true);
     try {
       const token = localStorage.getItem("token");
-      await axios.post("http://localhost:5000/api/auth/profile", editFields, {
+      await axios.post("https://technians-backend.onrender.com/api/auth/profile", editFields, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setProfile({ ...profile, ...editFields });

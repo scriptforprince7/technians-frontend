@@ -16,7 +16,7 @@ const TodoList = () => {
 
     try {
       await axios.post(
-        "http://localhost:5000/api/todos",
+        "https://technians-backend.onrender.com/api/todos",
         { title, description },
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },

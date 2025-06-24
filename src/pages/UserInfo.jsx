@@ -13,7 +13,7 @@ const UserInfo = () => {
     const fetchUsers = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await axios.get("http://localhost:5000/api/auth/users", {
+        const res = await axios.get("https://technians-backend.onrender.com/api/auth/users", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setUsers(res.data);
@@ -46,7 +46,7 @@ const UserInfo = () => {
 
       if (result.isConfirmed) {
         const token = localStorage.getItem("token");
-        await axios.delete(`http://localhost:5000/api/auth/user/data/${userId}`, {
+        await axios.delete(`https://technians-backend.onrender.com/api/auth/user/data/${userId}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
 

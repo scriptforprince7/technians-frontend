@@ -21,7 +21,7 @@ const SignupPage = () => {
     if (!otpStep) {
       setLoading(true);
       try {
-        await axios.post("http://localhost:5000/api/auth/signup-otp", { name, email, password });
+        await axios.post("https://technians-backend.onrender.com/api/auth/signup-otp", { name, email, password });
         toast.success("OTP sent to your email. Please enter it below.");
         setOtpStep(true);
       } catch (error) {
@@ -33,7 +33,7 @@ const SignupPage = () => {
       // Step 2: Verify OTP
       setLoading(true);
       try {
-        await axios.post("http://localhost:5000/api/auth/verify-otp", { name, email, password, otp });
+        await axios.post("https://technians-backend.onrender.com/api/auth/verify-otp", { name, email, password, otp });
         toast.success("Signup successful! Please log in.");
         navigate("/login");
       } catch (error) {
@@ -47,7 +47,7 @@ const SignupPage = () => {
   // Google Sign Up Handlers
   const handleGoogleSuccess = async (credentialResponse) => {
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/google", {
+      const res = await axios.post("https://technians-backend.onrender.com/api/auth/google", {
         token: credentialResponse.credential,
       });
       // Store token, name, profile image, signup method, and superuser status in localStorage

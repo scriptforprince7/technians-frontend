@@ -26,7 +26,7 @@ const AllTodos = () => {
 
     const fetchTodos = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/todos", {
+        const response = await axios.get("https://technians-backend.onrender.com/api/todos", {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -44,7 +44,7 @@ const AllTodos = () => {
 
   const handleDeleteTodo = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/todos/${id}`, {
+      await axios.delete(`https://technians-backend.onrender.com/api/todos/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -74,7 +74,7 @@ const AllTodos = () => {
   const handleEditTodo = async (id) => {
     try {
       const response = await axios.put(
-        `http://localhost:5000/api/todos/${id}`,
+        `https://technians-backend.onrender.com/api/todos/${id}`,
         { title: editedTitle, description: editedDescription },
         { headers: { Authorization: `Bearer ${token}` } }
       );

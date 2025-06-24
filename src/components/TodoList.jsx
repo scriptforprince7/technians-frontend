@@ -14,7 +14,7 @@ const TodoList = () => {
 
     const fetchTodos = async () => {
         try{
-            const response = await axios.get(`http://localhost:5000/api/todos/${user_id}`);
+            const response = await axios.get(`https://technians-backend.onrender.com/api/todos/${user_id}`);
             setTodos(response.data);
         } catch (err) {
             console.error("Error fetching todos", err);
@@ -27,7 +27,7 @@ const handleAddTodo = async (e) => {
     if(!title.trim()) return alert ("Title is required");
 
     try{
-        await axios.post("http://localhost:5000/api/todos", {
+        await axios.post("https://technians-backend.onrender.com/api/todos", {
             user_id, title, description,
         });
 
@@ -41,7 +41,7 @@ const handleAddTodo = async (e) => {
 
 const handleToggleStatus = async (id, currentStatus) => {
     try{
-        await axios.put(`http://localhost:5000/api/todos/${id}`, {
+        await axios.put(`https://technians-backend.onrender.com/api/todos/${id}`, {
             status: !currentStatus,
         });
     } catch (err) {
@@ -51,7 +51,7 @@ const handleToggleStatus = async (id, currentStatus) => {
 
 const handleDeleteTodo = async (id) => {
     try{
-        await axios.delete(`http://localhost:5000/api/todos/${id}`);
+        await axios.delete(`https://technians-backend.onrender.com/api/todos/${id}`);
         fetchTodos();
     } catch (err) {
         console.error("Error deleteing todo:", err);
