@@ -31,23 +31,72 @@
   margin: auto; /* Ensure form stays centered */
 }
 
-/* Input Styling */
-.auth-container input, .otp-container input {
+/* Input Wrapper (for all fields) */
+.input-wrapper {
+  display: flex;
+  align-items: center;
   width: 100%;
-  padding: 10px 12px;
+  background: #f5f8ff;
   border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 1rem;
-  transition: 0.3s ease-in-out;
+  border-radius: 6px;
+  margin-bottom: 0;
+  position: relative;
+  min-height: 48px;
   box-sizing: border-box;
-  text-align: left;
 }
 
-/* Input Focus Effect */
-.auth-container input:focus {
-  border-color: #4caf50;
+.input-wrapper input[type="text"],
+.input-wrapper input[type="email"],
+.input-wrapper input[type="password"],
+.input-wrapper input[type="number"] {
+  border: none;
   outline: none;
-  box-shadow: 0 0 5px #4caf50;
+  background: transparent;
+  flex: 1;
+  padding: 12px 36px 12px 14px;
+  font-size: 1rem;
+  border-radius: 6px;
+  min-width: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.input-wrapper input:focus {
+  box-shadow: none;
+}
+
+.password-toggle-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #4caf50;
+  font-size: 20px;
+  user-select: none;
+  z-index: 2;
+  background: transparent;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  height: 24px;
+}
+
+/* Responsive fix for mobile */
+@media (max-width: 500px) {
+  .input-wrapper input[type="text"],
+  .input-wrapper input[type="email"],
+  .input-wrapper input[type="password"],
+  .input-wrapper input[type="number"] {
+    font-size: 0.97rem;
+    padding: 10px 32px 10px 10px;
+  }
+  .password-toggle-icon {
+    font-size: 18px;
+    right: 8px;
+  }
 }
 
 /* Button Styling */

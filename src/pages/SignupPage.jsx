@@ -125,17 +125,8 @@ const SignupPage = () => {
             disabled={otpStep}
           />
           <span
+            className="password-toggle-icon"
             onClick={() => setShowPassword((prev) => !prev)}
-            style={{
-              position: 'absolute',
-              right: 12,
-              top: '50%',
-              transform: 'translateY(-50%)',
-              cursor: 'pointer',
-              color: '#4caf50',
-              fontSize: 20,
-              userSelect: 'none',
-            }}
             tabIndex={0}
             aria-label={showPassword ? 'Hide password' : 'Show password'}
           >

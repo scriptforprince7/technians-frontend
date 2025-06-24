@@ -65,14 +65,16 @@ const LoginPage = () => {
       </button>
       <form onSubmit={handleLogin} className="auth-form">
         <h2>Login</h2>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <div style={{ position: 'relative', width: '100%' }}>
+        <div className="input-wrapper">
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+        </div>
+        <div className="input-wrapper">
           <input
             type={showPassword ? "text" : "password"}
             placeholder="Password"
@@ -80,20 +82,10 @@ const LoginPage = () => {
             onChange={(e) => setPassword(e.target.value)}
             required
             minLength={6}
-            style={{ paddingRight: 40 }}
           />
           <span
+            className="password-toggle-icon"
             onClick={() => setShowPassword((prev) => !prev)}
-            style={{
-              position: 'absolute',
-              right: 12,
-              top: '50%',
-              transform: 'translateY(-50%)',
-              cursor: 'pointer',
-              color: '#888',
-              fontSize: 20,
-              userSelect: 'none',
-            }}
             tabIndex={0}
             aria-label={showPassword ? 'Hide password' : 'Show password'}
           >

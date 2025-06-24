@@ -7,6 +7,7 @@ const Home = () => {
   const [userName, setUserName] = useState("");
   const [profileImage, setProfileImage] = useState("");
   const [signupMethod, setSignupMethod] = useState("");
+  const [isSuperuser, setIsSuperuser] = useState(false);
   const navigate = useNavigate();
 
   // Check if token exists and extract user info
@@ -15,15 +16,18 @@ const Home = () => {
     const storedName = localStorage.getItem("name");
     const storedProfileImage = localStorage.getItem("profileImage");
     const storedSignupMethod = localStorage.getItem("signupMethod");
+    const storedIsSuperuser = localStorage.getItem("isSuperuser");
 
     if (token && storedName) {
       setUserName(storedName);
       setProfileImage(storedProfileImage || "");
       setSignupMethod(storedSignupMethod || "email");
+      setIsSuperuser(storedIsSuperuser === "true");
     } else {
       setUserName("");
       setProfileImage("");
       setSignupMethod("");
+      setIsSuperuser(false);
     }
   }, []);
 
@@ -37,6 +41,7 @@ const Home = () => {
     setUserName("");
     setProfileImage("");
     setSignupMethod("");
+    setIsSuperuser(false);
     navigate("/login");
   };
 
@@ -84,7 +89,21 @@ const Home = () => {
       {renderAvatar()}
 
       {/* Display user name if logged in */}
-      {userName ? <h3>Hey, {userName}!</h3> : <h2>Welcome, Guest!</h2>}
+      {userName ? (
+        <div className="user-welcome-section">
+          <h3>
+            Hey, {userName}!
+            {isSuperuser && (
+              <span className="superuser-badge-home">
+                <span className="superuser-icon">👑</span>
+                <span className="superuser-text">Superuser</span>
+              </span>
+            )}
+          </h3>
+        </div>
+      ) : (
+        <h2>Welcome, Guest!</h2>
+      )}
 
       {/* Home buttons */}
       <div className="home-buttons">
