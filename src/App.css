@@ -1,0 +1,351 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+  color: #333;
+  text-align: center;
+}
+
+h1 {
+  color: #444;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  background: #4caf50;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+.home-buttons button {
+  background: #007BFF;
+}
+
+.home-buttons button:hover {
+  background: #0056b3;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  width: 250px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-container {
+  padding: 20px;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.cart-icon {
+  position: relative;
+  font-size: 24px;
+  text-decoration: none;
+  color: black;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background: red;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 3px 7px;
+  border-radius: 50%;
+}
+
+
+.home-container {
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+/* Dark mode toggle styling */
+.dark-mode-toggle {
+  position: absolute;
+  top: 20px;
+  right: 60px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  z-index: 10;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Ensure the icon adapts on smaller screens */
+@media (max-width: 480px) {
+  .dark-mode-toggle {
+    top: 22px;
+    right: 55px;
+    font-size: 1.2rem;
+  }
+}
+
+.home-buttons button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background: #4caf50;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.home-buttons button:hover {
+  background: #45a049;
+}
+
+/* Dark Theme Styles */
+body.dark-theme {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+body.dark-theme h1 {
+  color: #ffffff;
+}
+
+body.dark-theme button {
+  background: #4a5568;
+  color: #ffffff;
+}
+
+body.dark-theme button:hover {
+  background: #2d3748;
+}
+
+body.dark-theme .home-buttons button {
+  background: #3182ce;
+}
+
+body.dark-theme .home-buttons button:hover {
+  background: #2c5aa0;
+}
+
+body.dark-theme .product-card {
+  background: #2d3748;
+  border-color: #4a5568;
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .cart-icon {
+  color: #ffffff;
+}
+
+body.dark-theme .header {
+  background: #2d3748;
+  color: #ffffff;
+}
+
+/* Dark theme for auth forms */
+body.dark-theme .auth-container,
+body.dark-theme .otp-container {
+  background: #1a1a1a;
+}
+
+body.dark-theme .auth-container h2,
+body.dark-theme .otp-container h2 {
+  color: #ffffff;
+}
+
+body.dark-theme .auth-container form,
+body.dark-theme .otp-container form {
+  background: #2d3748;
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .auth-container input,
+body.dark-theme .otp-container input {
+  background: #4a5568;
+  border-color: #718096;
+  color: #ffffff;
+}
+
+body.dark-theme .auth-container input:focus,
+body.dark-theme .otp-container input:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+body.dark-theme .auth-container p,
+body.dark-theme .otp-container p {
+  color: #cbd5e0;
+}
+
+body.dark-theme .auth-container a {
+  color: #4caf50;
+}
+
+/* Dark theme for OTP verification */
+body.dark-theme .otp-verification-container {
+  background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+}
+
+body.dark-theme .otp-verification-card {
+  background: #2d3748;
+  color: #ffffff;
+}
+
+body.dark-theme .otp-verification-card h2 {
+  color: #ffffff;
+}
+
+body.dark-theme .otp-description {
+  color: #cbd5e0;
+}
+
+body.dark-theme .otp-input {
+  background: #4a5568;
+  border-color: #718096;
+  color: #ffffff;
+}
+
+body.dark-theme .otp-input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+body.dark-theme .resend-timer {
+  color: #cbd5e0;
+}
+
+body.dark-theme .resend-btn {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+body.dark-theme .resend-btn:hover:not(:disabled) {
+  background: #667eea;
+  color: #ffffff;
+}
+
+/* Dark theme for dashboard */
+body.dark-theme .dashboard-content {
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+body.dark-theme .sidebar {
+  background: #2d3748;
+  color: #ffffff;
+}
+
+body.dark-theme .sidebar a {
+  color: #cbd5e0;
+}
+
+body.dark-theme .sidebar a:hover {
+  background: #4a5568;
+}
+
+body.dark-theme .sidebar .active a {
+  background: #4a5568;
+  color: #ffffff;
+}
+
+/* Dark theme for profile component */
+body.dark-theme .profile-container {
+  background: #2d3748;
+  color: #ffffff;
+}
+
+body.dark-theme .profile-card {
+  background: #4a5568;
+  border-color: #718096;
+  color: #ffffff;
+}
+
+body.dark-theme .profile-card h2 {
+  color: #ffffff;
+}
+
+body.dark-theme .profile-card label {
+  color: #cbd5e0;
+}
+
+body.dark-theme .profile-card input {
+  background: #2d3748;
+  border-color: #718096;
+  color: #ffffff;
+}
+
+body.dark-theme .profile-card input:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+body.dark-theme .profile-card button {
+  background: #4caf50;
+  color: #ffffff;
+}
+
+body.dark-theme .profile-card button:hover {
+  background: #45a049;
+}
+
+/* Dark theme for theme settings */
+body.dark-theme .theme-settings {
+  color: #ffffff;
+}
+
+body.dark-theme .theme-settings h2 {
+  color: #ffffff;
+}
+
+/* Dark theme for toast notifications */
+body.dark-theme .Toastify__toast {
+  background: #2d3748;
+  color: #ffffff;
+}
+
+body.dark-theme .Toastify__toast-body {
+  color: #ffffff;
+}
+
+/* Dark theme for any remaining elements */
+body.dark-theme * {
+  border-color: #4a5568;
+}
+
+body.dark-theme input::placeholder {
+  color: #a0aec0;
+}
+
+body.dark-theme textarea::placeholder {
+  color: #a0aec0;
+}
+

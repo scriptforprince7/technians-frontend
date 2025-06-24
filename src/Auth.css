@@ -1,0 +1,370 @@
+.auth-container, .otp-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #f4f4f4;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Heading Styling */
+.auth-container h2, .otp-container h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Form Container Styling */
+.auth-container form, .otp-container form {
+  background: #fff;
+  padding: 25px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-sizing: border-box;
+  margin: auto; /* Ensure form stays centered */
+}
+
+/* Input Styling */
+.auth-container input, .otp-container input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: 0.3s ease-in-out;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+/* Input Focus Effect */
+.auth-container input:focus {
+  border-color: #4caf50;
+  outline: none;
+  box-shadow: 0 0 5px #4caf50;
+}
+
+/* Button Styling */
+.auth-container button, .otp-container button {
+  padding: 10px;
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Button Hover */
+.auth-container button:hover, .otp-container button:hover {
+  background: #45a049;
+}
+
+/* Paragraph Styling */
+.auth-container p, .otp-container p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+}
+
+/* Link Styling */
+.auth-container a {
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.auth-container a:hover {
+  text-decoration: underline;
+}
+
+/* OTP Verification Styles */
+.otp-verification-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.otp-verification-card {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+.otp-verification-card h2 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.otp-description {
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.otp-form {
+  margin-bottom: 30px;
+}
+
+.otp-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.otp-input {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  transition: border-color 0.3s ease;
+}
+
+.otp-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.verify-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.verify-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.verify-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.resend-section {
+  margin-bottom: 20px;
+}
+
+.resend-timer {
+  color: #666;
+  font-size: 14px;
+}
+
+.resend-btn {
+  background: none;
+  border: 2px solid #667eea;
+  color: #667eea;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.resend-btn:hover:not(:disabled) {
+  background: #667eea;
+  color: white;
+}
+
+.resend-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.back-to-login {
+  margin-top: 20px;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #667eea;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.back-btn:hover {
+  color: #764ba2;
+}
+
+/* Center the auth form beautifully */
+.auth-form {
+  background: #fff;
+  padding: 32px 28px;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  max-width: 400px;
+  width: 100%;
+  margin: 48px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Center the form container vertically and horizontally */
+.auth-container, .auth-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Make sure the page background is subtle */
+body, .auth-container {
+  background: #f7f8fa;
+  min-height: 100vh;
+}
+
+.auth-form h2 {
+  margin-bottom: 10px;
+  color: #222;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f5f8ff;
+  transition: border-color 0.2s;
+}
+
+.auth-form input:focus {
+  border-color: #4caf50;
+  outline: none;
+  background: #fff;
+}
+
+.auth-form button {
+  width: 100%;
+  padding: 14px 0;
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.auth-form button:hover:not(:disabled) {
+  background: #388e3c;
+}
+
+.auth-form p {
+  margin-top: 8px;
+  font-size: 0.97rem;
+  color: #555;
+  text-align: center;
+}
+
+.auth-form a {
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-form a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+  .auth-form {
+    padding: 18px 6px;
+    max-width: 98vw;
+  }
+}
+
+/* Additional Dark Theme Styles for Auth */
+body.dark-theme .auth-form {
+  background: #2d3748;
+  color: #ffffff;
+  box-shadow: 0 4px 24px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .auth-form h2 {
+  color: #ffffff;
+}
+
+body.dark-theme .auth-form input {
+  background: #4a5568;
+  border-color: #718096;
+  color: #ffffff;
+}
+
+body.dark-theme .auth-form input:focus {
+  background: #2d3748;
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+body.dark-theme .auth-form input::placeholder {
+  color: #a0aec0;
+}
+
+body.dark-theme .auth-form p {
+  color: #cbd5e0;
+}
+
+body.dark-theme .auth-form a {
+  color: #4caf50;
+}
+
+body.dark-theme .auth-form a:hover {
+  color: #45a049;
+}
+
+/* Dark theme for Google sign-in button */
+body.dark-theme .google-signin-btn {
+  background: #2d3748;
+  border-color: #718096;
+  color: #ffffff;
+}
+
+body.dark-theme .google-signin-btn:hover {
+  background: #4a5568;
+}
+
+/* Dark theme for password toggle icon */
+body.dark-theme .password-toggle {
+  color: #cbd5e0;
+}
+
+body.dark-theme .password-toggle:hover {
+  color: #ffffff;
+}

@@ -1,0 +1,88 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .cart-icon {
+    position: relative;
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background: red;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 3px 7px;
+    border-radius: 50%;
+  }
+
+  .search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Stylish Input Field */
+  .search-bar input {
+    width: 70%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  /* Focus effect with glowing border */
+  .search-bar input:focus {
+    box-shadow: 0 0 10px rgba(0, 128, 255, 0.6);
+  }
+  
+  /* Dropdown styling */
+  .search-bar select {
+    width: 28%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Optional hover effect */
+  .search-bar select:hover {
+    background: #f0f0f0;
+  }
+  
+  /* Placeholder styling */
+  .search-bar input::placeholder {
+    color: #aaa;
+    font-style: italic;
+  }
+  
+  
+  /* Adjust product grid spacing after adding filters */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  
+  

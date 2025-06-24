@@ -1,0 +1,343 @@
+/* UserInfo Component Styles */
+.user-info-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.user-info-title {
+  color: #6c63ff;
+  font-weight: 800;
+  font-size: 32px;
+  margin-bottom: 30px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.user-info-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(108, 99, 255, 0.1);
+  border: 1px solid rgba(108, 99, 255, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #6c63ff;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.users-table-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.users-table thead {
+  background: linear-gradient(135deg, #6c63ff 0%, #5eead4 100%);
+  color: white;
+}
+
+.users-table th {
+  padding: 16px 12px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.users-table td {
+  padding: 16px 12px;
+  border-bottom: 1px solid #e2e8f0;
+  vertical-align: middle;
+}
+
+.users-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+.superuser-row {
+  background-color: #fef3c7;
+}
+
+.superuser-row:hover {
+  background-color: #fde68a;
+}
+
+.user-info-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.username {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.superuser-badge {
+  font-size: 16px;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+.login-type {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.login-type.google {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.login-type.email {
+  background-color: #dbeafe;
+  color: #2563eb;
+}
+
+.role-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.role-badge.superuser {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.role-badge.user {
+  background-color: #e0e7ff;
+  color: #6c63ff;
+}
+
+.user-info-loading {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: #6c63ff;
+  font-weight: 600;
+}
+
+.user-info-error {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: #ef4444;
+  font-weight: 600;
+  background-color: #fef2f2;
+  border-radius: 8px;
+  border: 1px solid #fecaca;
+}
+
+/* Delete Button Styles */
+.delete-user-btn {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 2px 4px rgba(239, 68, 68, 0.2);
+}
+
+.delete-user-btn:hover {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(239, 68, 68, 0.3);
+}
+
+.delete-user-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(239, 68, 68, 0.2);
+}
+
+.delete-user-btn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .user-info-container {
+    padding: 10px;
+  }
+  
+  .user-info-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .user-info-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .stat-card {
+    padding: 16px;
+  }
+  
+  .users-table th,
+  .users-table td {
+    padding: 8px 6px;
+    font-size: 12px;
+  }
+  
+  .delete-user-btn {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+  
+  .stat-number {
+    font-size: 1.5rem;
+  }
+  
+  .users-table-container {
+    overflow-x: auto;
+  }
+  
+  .users-table {
+    font-size: 12px;
+    min-width: 600px;
+  }
+}
+
+/* Dark Theme Styles */
+body.dark-theme .user-info-container {
+  color: #ffffff;
+}
+
+body.dark-theme .user-info-title {
+  color: #ffffff;
+}
+
+body.dark-theme .stat-card {
+  background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+  border-color: rgba(108, 99, 255, 0.2);
+}
+
+body.dark-theme .stat-label {
+  color: #cbd5e0;
+}
+
+body.dark-theme .users-table-container {
+  background: #2d3748;
+  border-color: #4a5568;
+}
+
+body.dark-theme .users-table thead {
+  background: linear-gradient(135deg, #6c63ff 0%, #5eead4 100%);
+}
+
+body.dark-theme .users-table td {
+  border-bottom-color: #4a5568;
+  color: #ffffff;
+}
+
+body.dark-theme .users-table tbody tr:hover {
+  background-color: #4a5568;
+}
+
+body.dark-theme .superuser-row {
+  background-color: #744210;
+}
+
+body.dark-theme .superuser-row:hover {
+  background-color: #92400e;
+}
+
+body.dark-theme .username {
+  color: #ffffff;
+}
+
+body.dark-theme .login-type.google {
+  background-color: #744210;
+  color: #fbbf24;
+}
+
+body.dark-theme .login-type.email {
+  background-color: #1e40af;
+  color: #93c5fd;
+}
+
+body.dark-theme .role-badge.superuser {
+  background-color: #744210;
+  color: #fbbf24;
+}
+
+body.dark-theme .role-badge.user {
+  background-color: #3730a3;
+  color: #a5b4fc;
+}
+
+body.dark-theme .user-info-error {
+  background-color: #1f2937;
+  border-color: #374151;
+  color: #fca5a5;
+}
+
+/* Dark theme for delete button */
+body.dark-theme .delete-user-btn {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  box-shadow: 0 2px 4px rgba(239, 68, 68, 0.3);
+}
+
+body.dark-theme .delete-user-btn:hover {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  box-shadow: 0 4px 8px rgba(239, 68, 68, 0.4);
+}
+
+body.dark-theme .delete-user-btn:disabled {
+  background: #4b5563;
+  color: #9ca3af;
+} 

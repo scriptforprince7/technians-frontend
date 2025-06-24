@@ -1,0 +1,113 @@
+.dark-mode-toggle {
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    position: fixed;
+    top: 20px;
+    right: 60px;
+    background-color: #f1f1f1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+  }
+  
+  .dark-mode-toggle:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Dark Mode Styles */
+  body.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+  }
+  
+  /* Product Cards in Dark Mode */
+  body.dark-mode .product-card {
+    background-color: #1e1e1e;
+    color: #ddd;
+    border: 1px solid #333;
+  }
+  
+  /* Header in Dark Mode */
+  body.dark-mode .header {
+    background-color: #333;
+    color: #f1f1f1;
+  }
+  
+  /* Cart Icon Dark Mode */
+  body.dark-mode .cart-icon {
+    color: #ddd;
+  }
+  
+  /* Buttons Dark Mode */
+  body.dark-mode button {
+    background-color: #444;
+    color: #ddd;
+    border: 1px solid #555;
+  }
+
+
+
+  /* Dark mode background and general styling */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0; /* Soft white for readability */
+}
+
+/* Headings with a vibrant pop of color */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+  color: #4caf50; /* A nice green tone */
+}
+
+/* Paragraphs and general text */
+body.dark-mode p {
+  color: #c5cae9; /* Soft lavender-blue for better contrast */
+}
+
+/* Links in dark mode */
+body.dark-mode a {
+  color: #64b5f6; /* Soft sky blue */
+  transition: color 0.3s ease;
+}
+
+body.dark-mode a:hover {
+  color: #4fc3f7; /* Brighter hover effect */
+}
+
+/* Buttons in dark mode */
+body.dark-mode button {
+  background-color: #333;
+  color: #ffd700; /* Gold color for button text */
+  border: 1px solid #555;
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode button:hover {
+  background-color: #444;
+  color: #ff9800; /* Warm orange hover color */
+}
+
+/* Product card styling */
+body.dark-mode .product-card {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border: 1px solid #333;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+/* Header styling */
+body.dark-mode .header {
+  background-color: #333;
+  color: #4caf50;
+  box-shadow: 0 4px 10px rgba(0, 255, 255, 0.2);
+}
+
+/* Cart icon styling */
+body.dark-mode .cart-icon {
+  color: #ffd700; /* Golden color for visibility */
+}
+
+  
